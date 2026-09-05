@@ -5,9 +5,19 @@
 
 using namespace std;
 
+struct Color{
+    int red;
+    int green;
+    int blue;
+};
+
 int main()
 {
-    cout << "hello world" << endl;
+    Color testColor = {100, 200, 300};
+
+    cout << "Test Color: " << endl;
+    cout << "Red: " << testColor.red << "Green: " << testColor.green 
+         << "Blue: " << testColor.blue << endl;
     
     return 0;  
 }

@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <vector>
+#include <iomanip>
 
 using namespace std;
 
@@ -53,6 +54,29 @@ int main()
     
     cout << "Milestone 3: " << endl;
     cout << "Number of colors in vector: " << colors.size() << endl;
+
+    // output formatted table showing vector's contents
+    cout << left
+         << setw(10) << "Color#"
+         << setw(10) << "R value"
+         << setw(10) << "G value"
+         << setw(10) << "B value" << endl;
+
+    cout << left
+         << setw(10) << "------"
+         << setw(10) << "-------"
+         << setw(10) << "-------"
+         << setw(10) << "-------" << endl;
+
+    for(int i = 0; i < colors.size(); i++)
+    {
+        cout << left
+             << setw(10) << i + 1
+             << setw(10) << colors[i].red
+             << setw(10) << colors[i].green
+             << setw(10) << colors[i].blue
+             << endl;
+    }
 
     return 0;  
 }

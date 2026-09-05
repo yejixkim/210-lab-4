@@ -33,6 +33,26 @@ int main()
     cout << "Red: " << colors[0].red << endl;
     cout << "Green: " << colors[0].green << endl;
     cout << "Blue: " << colors[0].blue << endl;
+
+    // generate random number n between 25-50
+    int n = rand() % 26 + 25;
+
+    // push n colors into vector
+    for(int i = 0; i < n; i++)
+    {
+        // temporary struct with random integers
+        Color temp;
+
+        temp.red= rand() % 250;
+        temp.green = rand() % 250;
+        temp.blue = rand() % 250;
+
+        // push temp struct into container
+        colors.push_back(temp);
+    }
     
+    cout << "Milestone 3: " << endl;
+    cout << "Number of colors in vector: " << colors.size() << endl;
+
     return 0;  
 }

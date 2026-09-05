@@ -5,6 +5,7 @@
 
 using namespace std;
 
+// make Color struct
 struct Color{
     int red;
     int green;
@@ -13,11 +14,25 @@ struct Color{
 
 int main()
 {
+    // make and initialize a Color object
     Color testColor = {100, 200, 300};
 
+    // output results
     cout << "Test Color: " << endl;
-    cout << "Red: " << testColor.red << "Green: " << testColor.green 
-         << "Blue: " << testColor.blue << endl;
+    cout << "Red: " << testColor.red << endl;
+    cout << "Green: " << testColor.green << endl;
+    cout << "Blue: " << testColor.blue << endl;
+
+    // make empty vector of Color structs
+    vector<Color> colors;
+
+    // adding test object to vector
+    colors.push_back(testColor);
+
+    cout << "First color in vector: " << endl;
+    cout << "Red: " << colors[0].red << endl;
+    cout << "Green: " << colors[0].green << endl;
+    cout << "Blue: " << colors[0].blue << endl;
     
     return 0;  
 }
